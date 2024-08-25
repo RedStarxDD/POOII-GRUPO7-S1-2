@@ -1,0 +1,35 @@
+Actividad 1.
+2. Compilar y ejecutar la clase "Circulo.java". ¿Puedes ejecutar la clase “Circulo.java”? ¿Porqué?
+- No, no se puede ejecutar directamente la clase Circulo puesto que faltaría un método que vendría a ser 'main' que vendría a ser un punto de entrada y es necesario para que el programa o código se pueda ejecutar.
+3. ¿Qué pasos en común debe realizaste para ejecutar cada uno de los ejercicios? Describir conceptos del paradigma orientada a objetos.
+- Primero se implementa los métodos y constructores necesarios en la clase.
+- Encapsulamiento: Las variables radio y color son atributos privados y solo accesibles a través de los métodos públicos que vendrían a ser getRadio() y getArea(), lo que protege los datos.
+- Abstracción: En esta actividad la clase Circulo proporciona lo que vendría a ser una representación abstracta de un círculo, sin revelar o aplicar la implementación detallada de cómo se calcula el área.
+- Polimorfismo: En este caso se aplica en el constructor sobrecargado, que permite crear objetos de la clase Circulo con diferentes parámetros.
+4. Ejecutar la clase “CirculoTest.java” y responde las siguientes preguntas:
+a. ¿Qué es el constructor y para qué sirve?
+ Un constructor es un método especial que se ejecuta o utiliza para inicializar objetos  automáticamente cuando se crea una instancia de una clase y se utiliza para establecer los valores iniciales de los atributos de la clase u objeto.
+b. ¿Con qué método recupero el radio del círculo?
+El método para recuperar el radio del Circulo vendría a ser 'getRadio()'
+c. ¿Por qué los atributos son privados y los métodos son públicos?
+Los atributos son privados para encapsularlos y protegerlos de modificaciones externas no deseadas o accesos directos que no son controlados. De esta manera, se garantiza que los atributos solo se puedan acceder y modificar a través de los métodos públicos de la clase, lo que permite controlar y validar los cambios.
+d. ¿Qué pasa si accedes directamente a los atributos del círculo desde el método main()?
+Se obtendría error porque los atributos privados no son accesibles fuera de la clase que los define. Solo pueden ser accedidos o modificados mediante los métodos públicos de la clase.
+e. ¿Qué pasa si modificas directamente el atributo area del círculo desde el método main()?
+ No se puede modificar directamente porque no existe un atributo 'area' en la clase 'circulo'. Si se intenta acceder o modificar directamente un atributo que no existe y al compilar aparecerá un error.
+
+f. En la clase “CirculoTest.java”, ejecuta la siguiente instrucción: System.out.println(c1.radius), donde c1 es una instancia del objeto Círculo. ¿Qué ocurrió? Explique el mensaje de error.
+El resultado es:
+Mensaje de error -> error: radius has private access in Circulo
+Esto se debe a que La instrucción System.out.println(c1.radius) causará un error de compilación porque el atributo 'radio' es privado y no puede ser accedido directamente desde fuera de la clase Circulo.
+g. En la clase “CirculoTest.java”, ejecuta la siguiente instrucción: c1.radius=42.0, donde c1 es una instancia del objeto Círculo. ¿Qué ocurrió?. Explique el mensaje de error.
+En este caso también como resultado nos dará error  de compilación debido a que 'radio' es un atributo privado. 
+h. ¿Con qué método modificas el valor de un atributo de la clase “Circulo.java”?
+Para modificar el valor de un atributo de la clase Circulo, se puede usar 'setter' como setRadio(double radio).
+i. Crear un objeto de tipo Círculo y modifica los valores por defecto. 
+ - Primero en la clase Circulo, creamos un método setter para radio
+- Luego en main, creamos un objeto circulo y se modifica su valor
+j. ¿Para qué sirve la palabra reservada “this”?. Modifique el constructor con argumentos (radio y color) y utiliza “this” y métodos setters en la clase “Circulo.java”.
+La palabra "this" se refiereal objeto actual en una clase. Es útil para diferenciar entre atributos de clase y parámetros de método cuando tienen el mismo nombre.
+k. ¿Para qué sirve el método toString()?
+- El método 'toString()'  proporciona  una representación en cadena de un objeto. Se utiliza y es util comúnmente para imprimir sobre un objetivo en una forma legible.
