@@ -19,7 +19,6 @@ public class Circulo {
     }
     public Circulo( double radio) {
         this.radio = radio;   
-        this.color = "azul";
     }
 
     public double getRadio() {
