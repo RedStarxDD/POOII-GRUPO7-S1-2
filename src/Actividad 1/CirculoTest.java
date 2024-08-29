@@ -20,7 +20,7 @@ public class CirculoTest {
         
         Circulo c3 = new Circulo();
         c3.setRadio(3.56);
-        c2.setColor("Azul");
+        c2.setColor("Negro");
         System.out.println("Radio: " + c3.getRadio());
         System.out.println("Area: " + c3.getArea());
         System.out.println("Color: " + c3.getColor());
