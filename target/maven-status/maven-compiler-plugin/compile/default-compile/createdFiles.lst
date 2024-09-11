@@ -1,5 +1,7 @@
 Figuras\Triangulo.class
+Figuras\Circulo.class
 Figuras\SuperficiePlana.class
 Figuras\FiguraGeometrica.class
-Figuras\Semana1Ejercicio.class
 Figuras\Punto.class
+Figuras\Shape.class
+Figuras\Semana1Ejercicio.class

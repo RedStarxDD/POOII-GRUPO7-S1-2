@@ -9,7 +9,8 @@ package Figuras;
  * @author C2A601-03
  */
 public class Triangulo extends FiguraGeometrica{
-    Punto punto1, punto2, punto3;
+    private Punto punto1, punto2, punto3;
+    private double ladoA, ladoB, ladoC;
 
     public Triangulo(String nombre) {
         super(nombre);
@@ -20,6 +21,10 @@ public class Triangulo extends FiguraGeometrica{
         this.punto1 = punto1;
         this.punto2 = punto2;
         this.punto3 = punto3;
+        
+        ladoA=punto1.getDistancia(punto2);
+        ladoB=punto2.getDistancia(punto3);
+        ladoC=punto3.getDistancia(punto1);
     }
     
     public Punto getPunto1() {
@@ -48,28 +53,25 @@ public class Triangulo extends FiguraGeometrica{
 
     @Override
     public String toString() {
-        return "Triangulo{" + "punto1=" + punto1 + ", punto2=" + punto2 + ", punto3=" + punto3 + '}';
+        return "Triangulo{" + super.toString() + ", punto1=" + punto1 + ", punto2=" + punto2 + ", punto3=" + punto3 + '}';
     }
 
     @Override
     public double calcularAreaFigura() {
-        double a=punto1.getDistancia(punto2);
-        double b=punto2.getDistancia(punto3);
-        double c=punto3.getDistancia(punto1);
-        
         // Calcular el semiperímetro
-        double s = (a + b + c) / 2.0;
+        double s = obtenerPerimetro()/2;
 
         // Calcular el área usando la fórmula de Herón
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        return Math.sqrt(s * (s - ladoA) * (s - ladoB) * (s - ladoC));
     }
 
     @Override
     public boolean esRegular() {
-        double a=punto1.getDistancia(punto2);
-        double b=punto2.getDistancia(punto3);
-        double c=punto3.getDistancia(punto1);
+        return (ladoA==ladoB && ladoB==ladoC);
+    }
 
-        return (a==b && b==c);
+    @Override
+    public double obtenerPerimetro() {
+        return ladoA + ladoB + ladoC;
     }
 }

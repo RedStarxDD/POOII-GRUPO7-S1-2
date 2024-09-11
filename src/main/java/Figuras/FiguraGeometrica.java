@@ -8,7 +8,7 @@ package Figuras;
  *
  * @author C2A601-03
  */
-public abstract class FiguraGeometrica {
+public abstract class FiguraGeometrica implements Shape{
     private String nombre;
 
     public FiguraGeometrica(String nombre) {
@@ -26,4 +26,12 @@ public abstract class FiguraGeometrica {
     public abstract double calcularAreaFigura();
     
     public abstract boolean esRegular();
+
+    @Override
+    public String toString() {
+        return "FiguraGeometrica{" + "nombre=" + nombre + '}';
+        
+    }
+    
+    
 }

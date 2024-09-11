@@ -25,6 +25,8 @@ public class SuperficiePlana {
     public void calcularAreas(){
         for (FiguraGeometrica figura : figurasGeometricas) {
             System.out.println("El area de "+figura.getNombre()+" es: "+figura.calcularAreaFigura());
+            System.out.println("El perímetro de "+figura.getNombre()+" es: "+figura.obtenerPerimetro());
+            System.out.println(figura.toString());
         }
     }
 }
